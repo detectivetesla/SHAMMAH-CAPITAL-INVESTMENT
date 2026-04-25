@@ -79,14 +79,19 @@
             <header class="top-header">
                 <div class="header-left">
                     <button id="open-sidebar" class="mobile-only btn-icon"><i data-lucide="menu"></i></button>
-                    <h1>Financial Dashboard</h1>
+                    <!-- Mobile Profile info (Visible only on mobile) -->
+                    <div class="mobile-only mobile-user-pill">
+                        <img src="https://ui-avatars.com/api/?name=Kwame+Mensah&background=0052D4&color=fff" alt="User">
+                        <span>Kwame</span>
+                    </div>
+                    <h1 class="desktop-only">Financial Dashboard</h1>
                 </div>
                 <div class="header-actions">
-                    <div class="search-bar">
+                    <div class="search-bar desktop-only">
                         <i data-lucide="search"></i>
                         <input type="text" placeholder="Search...">
                     </div>
-                    <button class="btn-icon"><i data-lucide="bell"></i></button>
+                    <button class="btn-icon desktop-only"><i data-lucide="bell"></i></button>
                     <div class="auth-btns">
                         <button class="btn-text login-btn">Sign In</button>
                         <button class="btn-primary signup-trigger">Create Account</button>
