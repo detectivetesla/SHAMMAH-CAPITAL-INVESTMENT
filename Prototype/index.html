@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHAMMAH CAPITAL INVESTMENT | Interactive Prototype</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="logo">
+                    <div class="logo-icon"></div>
+                    <span>SHAMMAH CAPITAL INVESTMENT</span>
+                </div>
+            </div>
+            
+            <nav>
+                <div class="nav-category">MAIN</div>
+                <div class="nav-item active" data-target="dashboard">
+                    <i data-lucide="layout-dashboard"></i>
+                    <span>Dashboard</span>
+                </div>
+                <div class="nav-item">
+                    <i data-lucide="wallet"></i>
+                    <span>Savings</span>
+                </div>
+                <div class="nav-item">
+                    <i data-lucide="bar-chart-3"></i>
+                    <span>Investments</span>
+                </div>
+                <div class="nav-item">
+                    <i data-lucide="hand-coins"></i>
+                    <span>Transactions</span>
+                </div>
+                <div class="nav-item">
+                    <i data-lucide="users"></i>
+                    <span>Recipients</span>
+                </div>
+
+                <div class="nav-category">OTHER</div>
+                <div class="nav-item">
+                    <i data-lucide="layers"></i>
+                    <span>Integrations</span>
+                </div>
+                <div class="nav-item">
+                    <i data-lucide="settings"></i>
+                    <span>Settings</span>
+                </div>
+                <div class="nav-item">
+                    <i data-lucide="help-circle"></i>
+                    <span>Get Help</span>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="support-card">
+                    <i data-lucide="help-circle"></i>
+                    <p>Need Support?</p>
+                    <span>Contact an expert</span>
+                    <button class="btn-white">Contact Us</button>
+                </div>
+                <div class="user-profile-bottom">
+                    <img src="https://ui-avatars.com/api/?name=Kwame+Mensah&background=0052D4&color=fff" alt="User">
+                    <div class="user-info">
+                        <p class="user-name">Kwame Mensah</p>
+                        <p class="user-email">kwame@example.com</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <header class="top-header">
+                <div class="header-left">
+                    <button id="open-sidebar" class="mobile-only btn-icon"><i data-lucide="menu"></i></button>
+                    <h1>Financial Dashboard</h1>
+                </div>
+                <div class="header-actions">
+                    <div class="search-bar">
+                        <i data-lucide="search"></i>
+                        <input type="text" placeholder="Search...">
+                    </div>
+                    <button class="btn-icon"><i data-lucide="bell"></i></button>
+                    <div class="auth-btns">
+                        <button class="btn-text login-btn">Sign In</button>
+                        <button class="btn-primary signup-trigger">Create Account</button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Screen -->
+            <section id="dashboard-screen" class="screen active">
+                <div class="welcome-banner">
+                    <h2>Good Morning, Kwame!</h2>
+                    <div class="time-filters">
+                        <span class="active">12 M</span>
+                        <span>1 M</span>
+                        <span>7 D</span>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid">
+                    <!-- Top Stats Cards -->
+                    <div class="card stat-card glass">
+                        <div class="stat-header">
+                            <p>Total Balance</p>
+                            <span class="trend positive">+15.4%</span>
+                        </div>
+                        <div class="stat-main">
+                            <img src="https://flagcdn.com/w40/gh.png" alt="GHS" class="currency-flag">
+                            <h3>₵ 63,481.00</h3>
+                        </div>
+                        <div class="card-btns">
+                            <button class="btn-dark">Deposit</button>
+                            <button class="btn-light">Withdraw</button>
+                        </div>
+                    </div>
+
+                    <div class="card stat-card glass">
+                        <div class="stat-header">
+                            <p>Savings Balance</p>
+                            <i data-lucide="trending-up" class="text-success"></i>
+                        </div>
+                        <div class="stat-main">
+                            <h3>₵ 42,000.00</h3>
+                        </div>
+                        <div class="progress-wrap">
+                            <div class="progress-bar" style="width: 70%"></div>
+                        </div>
+                        <p class="small-text">₵ 18k more to your goal</p>
+                    </div>
+
+                    <!-- Virtual Card UI (Black Edition) -->
+                    <div class="card virtual-card-box black-edition">
+                        <div class="vcard-header">
+                            <p>Platinum Invest Card</p>
+                            <i data-lucide="nfc"></i>
+                        </div>
+                        <div class="vcard-body">
+                            <p class="vcard-num">**** **** **** 4921</p>
+                        </div>
+                        <div class="vcard-footer">
+                            <div class="v-info">
+                                <p>NAME</p>
+                                <span>KWAME MENSAH</span>
+                            </div>
+                            <div class="v-info">
+                                <p>EXPIRY</p>
+                                <span>12/28</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card stat-card glass">
+                        <div class="stat-header">
+                            <p>Active Loans</p>
+                            <i data-lucide="alert-circle" class="text-warning"></i>
+                        </div>
+                        <div class="stat-main">
+                            <h3>₵ 2,500.00</h3>
+                        </div>
+                        <button class="btn-text small">Repayment Schedule <i data-lucide="chevron-right"></i></button>
+                    </div>
+
+                    <!-- Charts Row -->
+                    <div class="card wide glass">
+                        <div class="card-header">
+                            <h3>Budget Overview</h3>
+                            <div class="legend-wrap">
+                                <span class="dot income"></span> Income
+                                <span class="dot outcome"></span> Outcome
+                            </div>
+                        </div>
+                        <div class="chart-mock">
+                            <div class="chart-bar-group"><div class="b-income" style="height: 60%"></div><div class="b-outcome" style="height: 40%"></div><p>Jun</p></div>
+                            <div class="chart-bar-group"><div class="b-income" style="height: 40%"></div><div class="b-outcome" style="height: 30%"></div><p>Jul</p></div>
+                            <div class="chart-bar-group"><div class="b-income" style="height: 80%"></div><div class="b-outcome" style="height: 50%"></div><p>Aug</p></div>
+                            <div class="chart-bar-group"><div class="b-income" style="height: 30%"></div><div class="b-outcome" style="height: 60%"></div><p>Sep</p></div>
+                            <div class="chart-bar-group"><div class="b-income" style="height: 50%"></div><div class="b-outcome" style="height: 45%"></div><p>Oct</p></div>
+                            <div class="chart-bar-group"><div class="b-income" style="height: 70%"></div><div class="b-outcome" style="height: 75%"></div><p>Nov</p></div>
+                        </div>
+                    </div>
+
+                    <div class="card table-card wide glass">
+                         <div class="card-header">
+                            <h3>Recent Transactions</h3>
+                             <button class="btn-text">View All <i data-lucide="arrow-right"></i></button>
+                        </div>
+                        <table class="transaction-table">
+                            <thead>
+                                <tr>
+                                    <th>To / From</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                    <th>Date</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><img src="https://ui-avatars.com/api/?name=MTN&background=FFCC00" class="avatar"> MTN Airtime</td>
+                                    <td class="neg">-₵ 50.00</td>
+                                    <td><span class="badge success">Success</span></td>
+                                    <td>Today, 10:45 AM</td>
+                                    <td><i data-lucide="more-vertical"></i></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="https://ui-avatars.com/api/?name=Rent&background=000" class="avatar"> Apartment Rent</td>
+                                    <td class="neg">-₵ 2,000.00</td>
+                                    <td><span class="badge pending">Pending</span></td>
+                                    <td>Oct 24, 2023</td>
+                                    <td><i data-lucide="more-vertical"></i></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- KYC Split Screen Overlay -->
+        <section id="kyc-overlay" class="screen full-overlay hidden">
+            <div class="kyc-modal-container glass">
+                <div class="kyc-left-info">
+                    <div class="kyc-info-header">
+                        <div class="logo-icon"></div>
+                        <span>Verification Progress</span>
+                    </div>
+                    <div class="kyc-progress-list">
+                        <div class="progress-step completed">
+                            <div class="step-dot"><i data-lucide="check"></i></div>
+                            <div class="step-text">
+                                <p>Identification</p>
+                                <span>Contact info and NIA number</span>
+                            </div>
+                        </div>
+                        <div class="progress-step current">
+                            <div class="step-dot"></div>
+                            <div class="step-text">
+                                <p>Photo Verification</p>
+                                <span>Face match & Liveness check</span>
+                            </div>
+                        </div>
+                        <div class="progress-step">
+                            <div class="step-dot"></div>
+                            <div class="step-text">
+                                <p>OTP Verification</p>
+                                <span>Final security confirmation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="kyc-right-actions">
+                    <header class="kyc-header">
+                        <button class="close-kyc btn-icon"><i data-lucide="x"></i></button>
+                    </header>
+
+                    <!-- STEP 1 -->
+                    <div id="step-1" class="kyc-action-content active">
+                        <h2>Identification</h2>
+                        <p class="subtitle">Complete the form below and enter your Ghana Card Number</p>
+                        
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <div class="input-with-flag">
+                                <img src="https://flagcdn.com/w40/gh.png" alt="GH">
+                                <input type="text" placeholder="+233 245075219" id="phone-val">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" placeholder="Enter your email address" id="email-val">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Ghana Card Number</label>
+                            <input type="text" placeholder="GHA-700000000-1" id="gha-val">
+                        </div>
+
+                        <div class="info-note">
+                            <i data-lucide="info"></i>
+                            <p>You will be required to take a picture to complete the verification process.</p>
+                        </div>
+
+                        <button class="btn-primary full-width next-kyc">Continue</button>
+                    </div>
+
+                    <!-- STEP 2 -->
+                    <div id="step-2" class="kyc-action-content hidden">
+                         <h2>Photo Verification</h2>
+                         <p class="subtitle">Ensuring your identity helps build a trusted investment community.</p>
+                         
+                         <div class="camera-ui-box">
+                            <div class="camera-view">
+                                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Aneka&backgroundColor=b6e3f4" alt="Capture">
+                            </div>
+                         </div>
+                         
+                         <button class="btn-primary full-width next-kyc">Capture & Continue</button>
+                    </div>
+
+                    <!-- STEP 3 -->
+                    <div id="step-3" class="kyc-action-content hidden">
+                        <h2>Enter Code</h2>
+                        <p class="subtitle">We've sent a 6-digit verification code to your phone.</p>
+                        
+                        <div class="otp-row">
+                            <input type="text" maxlength="1" class="otp-field">
+                            <input type="text" maxlength="1" class="otp-field">
+                            <input type="text" maxlength="1" class="otp-field">
+                            <input type="text" maxlength="1" class="otp-field">
+                            <input type="text" maxlength="1" class="otp-field">
+                            <input type="text" maxlength="1" class="otp-field">
+                        </div>
+                        
+                        <p class="small-text center">Didn't receive code? <span class="text-link">Resend</span></p>
+                        
+                        <button class="btn-primary full-width" id="finish-kyc">Verify & Complete</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

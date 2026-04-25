@@ -1,0 +1,22 @@
+{
+  "name": "shammah-capital-investment",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "backend:dev": "npm run start:dev --workspace=@shammah/backend",
+    "frontend:dev": "npm run dev --workspace=@shammah/frontend"
+  },
+  "overrides": {
+    "webpack": "^5.94.0",
+    "tmp": "^0.2.3",
+    "micromatch": "^4.0.8",
+    "cross-spawn": "^7.0.5",
+    "path-to-regexp": "^0.1.10",
+    "@nestjs/common": "^11.1.19",
+    "@nestjs/core": "^11.1.19"
+  }
+}

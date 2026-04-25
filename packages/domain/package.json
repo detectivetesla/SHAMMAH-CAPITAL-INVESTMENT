@@ -1,0 +1,9 @@
+{
+  "name": "@shammah/domain",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
