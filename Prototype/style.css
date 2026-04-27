@@ -298,6 +298,8 @@ body {
 .otp-field { width: 100%; max-width: 50px; height: 60px; border: 2px solid var(--border); border-radius: 10px; text-align: center; font-size: 1.5rem; font-weight: 700; outline: none; }
 
 /* RESPONSIVE AUDIT V1.2 */
+.mobile-only { display: none; }
+
 @media (max-width: 1024px) {
     .content { margin-left: 0; padding: 1.5rem; }
     .sidebar { transform: translateX(-100%); }
@@ -332,6 +334,4 @@ body {
     .auth-btns .btn-primary { width: 100%; text-align: center; }
 }
 
-/* Visibility Fixes */
-.mobile-only { display: none; }
 img { max-width: 100%; height: auto; }
