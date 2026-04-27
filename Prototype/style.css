@@ -1,4 +1,5 @@
-/* SHAMMAH CAPITAL INVESTMENT PROTOTYPE - V1.2.0 - MOBILE OPTIMIZED */
+/* SHAMMAH CAPITAL INVESTMENT PROTOTYPE - V1.4.0 - VISUAL HEADER FIX */
+
 
 :root {
     --primary: #0052D4;
@@ -107,22 +108,23 @@ body {
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
-    padding: var(--space-md) 0;
-    margin-bottom: var(--space-xl); 
+    padding: var(--space-md) var(--space-xl);
+    margin: calc(-1 * var(--space-lg)) calc(-1 * var(--space-xl)) var(--space-xl) calc(-1 * var(--space-xl));
     gap: 1rem; 
     flex-wrap: wrap; 
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(248, 250, 252, 0.8);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid transparent;
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
     transition: all 0.3s ease;
 }
 
 .top-header.scrolled {
-    border-color: var(--border);
-    padding: var(--space-sm) 0;
+    padding: var(--space-sm) var(--space-xl);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08); /* Stronger shadow on scroll */
 }
 
 .header-left { display: flex; align-items: center; gap: 1rem; }
