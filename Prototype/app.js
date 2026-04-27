@@ -84,4 +84,18 @@ document.addEventListener('DOMContentLoaded', () => {
             sidebar.classList.remove('open');
         }
     });
+
+    // Header scroll effect
+    const topHeader = document.querySelector('.top-header');
+    const contentArea = document.querySelector('.content');
+
+    if (topHeader && contentArea) {
+        contentArea.addEventListener('scroll', () => {
+            if (contentArea.scrollTop > 20) {
+                topHeader.classList.add('scrolled');
+            } else {
+                topHeader.classList.remove('scrolled');
+            }
+        });
+    }
 });
