@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHAMMAH CAPITAL INVESTMENT | Verification</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .kyc-page-wrapper {
+            background-color: var(--bg-main);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            width: 100%;
+        }
+
+        .kyc-page-container {
+            width: 100%;
+            max-width: 1000px;
+            background: white;
+            border-radius: 2rem;
+            display: flex;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+            min-height: 600px; /* Provides stable height */
+        }
+
+        @media (max-width: 768px) {
+            .kyc-page-wrapper {
+                padding: 0;
+            }
+            .kyc-page-container {
+                flex-direction: column;
+                border-radius: 0;
+                min-height: 100vh;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="kyc-page-wrapper">
+        <div class="kyc-page-container">
+            <div class="kyc-left-info">
+                <div class="kyc-info-header">
+                    <div class="logo-icon"></div>
+                    <span>Verification Progress</span>
+                </div>
+                <div class="kyc-progress-list">
+                    <div class="progress-step current">
+                        <div class="step-dot"></div>
+                        <div class="step-text">
+                            <p>Identification</p>
+                            <span>Contact info and NIA number</span>
+                        </div>
+                    </div>
+                    <div class="progress-step">
+                        <div class="step-dot"></div>
+                        <div class="step-text">
+                            <p>Photo Verification</p>
+                            <span>Face match & Liveness check</span>
+                        </div>
+                    </div>
+                    <div class="progress-step">
+                        <div class="step-dot"></div>
+                        <div class="step-text">
+                            <p>OTP Verification</p>
+                            <span>Final security confirmation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="kyc-right-actions">
+                <header class="kyc-header" style="display:flex; justify-content:flex-end;">
+                    <a href="auth.html" class="btn-icon" style="text-decoration: none;"><i data-lucide="x"></i></a>
+                </header>
+
+                <!-- STEP 1 -->
+                <div id="step-1" class="kyc-action-content active">
+                    <h2>Identification</h2>
+                    <p class="subtitle">Complete the form below and enter your Ghana Card Number</p>
+                    
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <div class="input-with-flag" style="display:flex; gap:10px;">
+                            <input type="text" placeholder="+233 245075219" id="phone-val" style="flex:1;">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="Enter your email address" id="email-val">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Ghana Card Number</label>
+                        <input type="text" placeholder="GHA-700000000-1" id="gha-val">
+                    </div>
+
+                    <div style="margin-top:20px;">
+                        <button class="btn-primary" style="width:100%; border-radius:10px;" class="next-kyc" id="next-1">Continue</button>
+                    </div>
+                </div>
+
+                <!-- STEP 2 -->
+                <div id="step-2" class="kyc-action-content hidden">
+                     <h2>Photo Verification</h2>
+                     <p class="subtitle">Ensuring your identity helps build a trusted investment community.</p>
+                     
+                     <div class="camera-ui-box" style="text-align:center; padding:2rem; background:#f1f5f9; border-radius:10px; margin-bottom:20px;">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Aneka&backgroundColor=b6e3f4" alt="Capture" style="width:150px; border-radius:50%; margin: 0 auto;">
+                     </div>
+                     
+                     <button class="btn-primary" id="next-2" style="width:100%; border-radius:10px;">Capture & Continue</button>
+                </div>
+
+                <!-- STEP 3 -->
+                <div id="step-3" class="kyc-action-content hidden">
+                    <h2>Enter Code</h2>
+                    <p class="subtitle">We've sent a 6-digit verification code to your phone.</p>
+                    
+                    <div class="otp-row" style="display:flex; justify-content:space-between; gap:0.5rem; margin-bottom:20px;">
+                        <input type="text" maxlength="1" class="otp-field">
+                        <input type="text" maxlength="1" class="otp-field">
+                        <input type="text" maxlength="1" class="otp-field">
+                        <input type="text" maxlength="1" class="otp-field">
+                        <input type="text" maxlength="1" class="otp-field">
+                        <input type="text" maxlength="1" class="otp-field">
+                    </div>
+                    
+                    <button class="btn-primary" id="finish-kyc" style="width:100%; border-radius:10px;">Verify & Complete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        lucide.createIcons();
+        document.addEventListener('DOMContentLoaded', () => {
+            // Standalone KYC Navigation Script specifically for the dedicated page
+            const next1 = document.getElementById('next-1');
+            const next2 = document.getElementById('next-2');
+            const step1 = document.getElementById('step-1');
+            const step2 = document.getElementById('step-2');
+            const step3 = document.getElementById('step-3');
+            const steps = document.querySelectorAll('.progress-step');
+
+            if (next1) {
+                next1.addEventListener('click', () => {
+                    step1.classList.add('hidden');
+                    step2.classList.remove('hidden');
+                    steps[0].classList.remove('current');
+                    steps[0].classList.add('completed');
+                    steps[1].classList.add('current');
+                });
+            }
+
+            if (next2) {
+                next2.addEventListener('click', () => {
+                    step2.classList.add('hidden');
+                    step3.classList.remove('hidden');
+                    steps[1].classList.remove('current');
+                    steps[1].classList.add('completed');
+                    steps[2].classList.add('current');
+                    setTimeout(() => {
+                        const otps = document.querySelectorAll('.otp-field');
+                        if (otps.length > 0) otps[0].focus();
+                    }, 100);
+                });
+            }
+            
+            const finish = document.getElementById('finish-kyc');
+            if(finish) {
+                finish.addEventListener('click', () => {
+                    alert('Registration complete! Moving to Dashboard.');
+                    window.location.href = 'index.html';
+                });
+            }
+        });
+    </script>
+</body>
+</html>
