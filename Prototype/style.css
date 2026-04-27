@@ -316,10 +316,10 @@ body {
     .progress-step::after { display: none; }
     .kyc-right-actions { padding: 2rem 1.5rem; }
     
-    .top-header { flex-direction: column; align-items: flex-start; }
-    .header-actions { width: 100%; justify-content: space-between; }
-    .search-bar { width: 100%; order: 2; margin-top: 0.5rem; }
-    .auth-btns { order: 1; width: 100%; justify-content: flex-end; }
+    .top-header { flex-direction: row; align-items: center; justify-content: space-between; }
+    .header-actions { width: auto; justify-content: flex-end; }
+    .search-bar { display: none !important; }
+    .auth-btns { display: none; }
 }
 
 @media (max-width: 480px) {
